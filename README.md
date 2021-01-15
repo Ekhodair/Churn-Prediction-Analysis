@@ -25,6 +25,7 @@ The data set includes information about:
 ![](figures/tenure.JPG) 
 **2.1 Histogram of Tenure of the customers who churned away and who continued showed that the customers with shorter tenure are more likely to churn away.**
 **We can present these plots more intuitively using Kernel Density Estimate Plot**
+
 ![](figures/tenurekde.JPG)
 
 **2.2 Retention rate appears to increase with the increase in a customer's tenure**
@@ -54,5 +55,28 @@ The data set includes information about:
 
 ***
 # 3. Predictive Modeling and Model Selection
+
+It gets crucially essential to fully grasp the business objective as it invokes further concern beyond the overall accuracy of the model. The selection process is driven by the worst case scenario, which is not being able to identify the customer who are more inclined to discontinue. Sensitivity (the ability of the classifier to correctly label as positive a sample that is actaully positive) in that sense, is both more relevant and significant than specificity (the ability of the classifier to correctly label as negative a sample that is actaully negative). in other words, false positives are more acceptable than false negatives. 
+
+In the case at hand, logistic regression is superior to other models in terms of both accuracy and sensitivity; thus, we will select logistic regression model on similar datasets to predict whether a customer is about to churn away or not.
+
+![](figures/summary.JPG)    
+
+
+In the absence of logistic regression, we would have preferred KNN to kernel support vector classifier, though SVC has better accuracy – because KNN model has better sensitivity. Moreover, we can adjust probability threshold to increase sensitivity at the expense of specificity. However, in our pursuit of higher sensitivity, it is crucial to take specificity in consideration (ability to identify true negatives). Poor specificity can lead to expenditure on attempts to retain the customers we would have retained them otherwise (this is the impact of false positives). At what point does the marketing/product teams start focusing on sensitivity is a managerial decision, which will primarily be driven by budget allocation.
+
+
+Both Sensitivity and Specificity are dependent on the proportion of positive and negative samples in our prediction process which raises an issue as the model tends to be biased towards the more frequently predicted class. However, in order to address such a problem, we use Reciever operating characterictic curve which measures the performace of a binary classifier as its discrimination threshold is varied along with area under curve(optimal value at AUC equals 1) which is still useful even with high class imbalance unlike overall accuracy. 
+
+
+![](figures/logreg.JPG)    
+
+![](figures/dt.JPG)    
+
+![](figures/knn.JPG)    
+
+![](figures/svm.JPG)    
+
+![](figures/rnforest.JPG)    
 
 
