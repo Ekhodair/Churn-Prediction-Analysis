@@ -66,9 +66,6 @@ In the case at hand, logistic regression is superior to other models in terms of
 In the absence of logistic regression, we would have preferred KNN to kernel support vector classifier, though SVC has better accuracy – because KNN model has better sensitivity. Moreover, we can adjust probability threshold to increase sensitivity at the expense of specificity. However, in our pursuit of higher sensitivity, it is crucial to take specificity in consideration (ability to identify true negatives). Poor specificity can lead to expenditure on attempts to retain the customers we would have retained them otherwise (this is the impact of false positives). At what point does the marketing/product teams start focusing on sensitivity is a managerial decision, which will primarily be driven by budget allocation.
 
 
-Both Sensitivity and Specificity are dependent on the proportion of positive and negative samples in our prediction process which raises an issue as the model tends to be biased towards the more frequently predicted class. However, in order to address such a problem, we use Reciever operating characterictic curve which measures the performace of a binary classifier as its discrimination threshold is varied along with area under curve(optimal value at AUC equals 1) which is still useful even with high class imbalance unlike overall accuracy. 
-
-
 ![](figures/logreg.JPG)    
 
 ![](figures/dt.JPG)    
@@ -79,4 +76,6 @@ Both Sensitivity and Specificity are dependent on the proportion of positive and
 
 ![](figures/rnforest.JPG)    
 
+Both Sensitivity and Specificity are dependent on the proportion of positive and negative samples in our prediction process which raises an issue as the model tends to be biased towards the more frequently predicted class. However, in order to address such a problem, we use Reciever operating characterictic curve which measures the performace of a binary classifier as its discrimination threshold is varied along with area under curve(optimal value at AUC equals 1) which is still useful even with high class imbalance unlike overall accuracy. 
 
+![](figures/models.JPG)    
